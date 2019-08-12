@@ -227,7 +227,7 @@ import CoreBluetooth
                 } else {
                     self.logger.a("Packet Receipt Notif disabled (Op Code = 2, Value = 0)")
                 }
-                success()
+                success(())
             },
             onError: report
         )
@@ -321,7 +321,7 @@ import CoreBluetooth
             self.report   = nil
             self.progressDelegate = nil
             self.dfuControlPointCharacteristic!.peripheralDidReceiveObject()
-            success()
+            success(())
         }
 
         dfuControlPointCharacteristic!.waitUntilUploadComplete(onSuccess: self.success!, onPacketReceiptNofitication: { bytesReceived in
@@ -390,7 +390,7 @@ import CoreBluetooth
                 // SDK 14 will add a new characteristic with buttonless service for bonded devices with bond information sharing between app and the bootloader.
                 else if ButtonlessDFU.matches(characteristic) {
                     buttonlessDfuCharacteristic = ButtonlessDFU(characteristic, logger)
-                    _success?()
+                    _success?(())
                     return
                 }
                 // End
@@ -416,7 +416,7 @@ import CoreBluetooth
                 return
             }
             
-            _success?()
+            _success?(())
         }
     }
     

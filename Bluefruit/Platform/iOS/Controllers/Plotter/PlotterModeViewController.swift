@@ -242,7 +242,7 @@ extension PlotterModeViewController: UartDataManagerDelegate {
             let linesStrings = dataString.replacingOccurrences(of: "\r", with: "").components(separatedBy: "\n")
             for lineString in linesStrings {
                 //   DLog("\tline: \(lineString)")
-                let valuesStrings = lineString.components(separatedBy: CharacterSet(charactersIn: ",; \t"))
+                let valuesStrings = lineString.components(separatedBy: CharacterSet(charactersIn: ",; \t:"))
                 var i = 0
                 // DLog("values: \(valuesStrings)")
                 for valueString in valuesStrings {

@@ -192,7 +192,7 @@ internal class ButtonlessDFU : NSObject, CBPeripheralDelegate {
                 logger.v("Notifications enabled for \(characteristic.uuid.uuidString)")
                 logger.a("Buttonless DFU notifications enabled")
             }
-            success?()
+            success?(())
         }
     }
     
@@ -229,7 +229,7 @@ internal class ButtonlessDFU : NSObject, CBPeripheralDelegate {
             if let dfuResponse = dfuResponse {
                 if dfuResponse.status == .success {
                     logger.a("\(dfuResponse.description) received")
-                    success?()
+                    success?(())
                 } else {
                     logger.e("Error \(dfuResponse.status!.code): \(dfuResponse.status!.description)")
                     // The returned errod code is incremented by 30 or 9000 to match Buttonless DFU or Experimental Buttonless DFU remote codes

@@ -76,7 +76,11 @@ class BleManager: NSObject {
 
         if let knownPeripherals = knownPeripherals {
             for peripheral in knownPeripherals {
-                DLog("Adding prediscovered peripheral: \(peripheral.name ?? peripheral.identifier.uuidString)")
+                if #available(OSX 10.13, *) {
+                    DLog("Adding prediscovered peripheral: \(peripheral.name ?? peripheral.identifier.uuidString)")
+                } else {
+                    // Fallback on earlier versions
+                }
                 discovered(peripheral: peripheral)
             }
         }

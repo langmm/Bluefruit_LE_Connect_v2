@@ -1741,37 +1741,55 @@
 				TargetAttributes = {
 					A9286C951E3A9216008E5F81 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2X94RM7457;
+						DevelopmentTeam = Q6Q6ARL85P;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
-							com.apple.iCloud = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.ClassKit = {
+								enabled = 0;
+							};
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
 							};
 						};
 					};
 					A98378231E42BF3100170319 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2X94RM7457;
+						DevelopmentTeam = Q6Q6ARL85P;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					A9BCD5991E4D2761003D1CEA = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2X94RM7457;
+						DevelopmentTeam = Q6Q6ARL85P;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					A9BCD5A51E4D2761003D1CEA = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2X94RM7457;
+						DevelopmentTeam = Q6Q6ARL85P;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					A9BCD61B1E4D3A61003D1CEA = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2X94RM7457;
-						LastSwiftMigration = 0820;
+						DevelopmentTeam = Q6Q6ARL85P;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1961,7 +1979,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error tTimere sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2483,12 +2501,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bluefruit/Platform/iOS/Bluefruit.entitlements;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				INFOPLIST_FILE = Bluefruit/Platform/iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bluefruit/Platform/iOS/Bluefruit-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -2501,12 +2522,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bluefruit/Platform/iOS/Bluefruit.entitlements;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				INFOPLIST_FILE = Bluefruit/Platform/iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bluefruit/Platform/iOS/Bluefruit-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -2520,11 +2544,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				INFOPLIST_FILE = Bluefruit/Platform/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.osx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg.osx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
@@ -2538,11 +2562,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				INFOPLIST_FILE = Bluefruit/Platform/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.osx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg.osx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
@@ -2553,10 +2577,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				INFOPLIST_FILE = "Bluefruit/Platform/watchOS/watchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2571,10 +2595,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				INFOPLIST_FILE = "Bluefruit/Platform/watchOS/watchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2590,10 +2614,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				IBSC_MODULE = Bluefruit_Extension;
 				INFOPLIST_FILE = Bluefruit/Platform/watchOS/watchOS/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2609,10 +2633,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				IBSC_MODULE = Bluefruit_Extension;
 				INFOPLIST_FILE = Bluefruit/Platform/watchOS/watchOS/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2627,7 +2651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				INFOPLIST_FILE = "$(SRCROOT)/Bluefruit/Platform/macOS_CommandLine/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_LDFLAGS = (
@@ -2637,11 +2661,13 @@
 					__info_plist,
 					"$(INFOPLIST_FILE)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg.osx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG COMMANDLINE";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bluefruit/Platform/macOS_CommandLine/BluefruitConnect-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -2649,7 +2675,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
-				DEVELOPMENT_TEAM = 2X94RM7457;
+				DEVELOPMENT_TEAM = Q6Q6ARL85P;
 				INFOPLIST_FILE = "$(SRCROOT)/Bluefruit/Platform/macOS_CommandLine/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_LDFLAGS = (
@@ -2659,11 +2685,13 @@
 					__info_plist,
 					"$(INFOPLIST_FILE)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adafruit.bluefruitconnect.digiegg.osx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = COMMANDLINE;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bluefruit/Platform/macOS_CommandLine/BluefruitConnect-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

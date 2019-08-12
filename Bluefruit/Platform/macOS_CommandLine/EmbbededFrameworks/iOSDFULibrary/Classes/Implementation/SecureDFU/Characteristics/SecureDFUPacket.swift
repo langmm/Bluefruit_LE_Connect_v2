@@ -100,7 +100,7 @@ internal class SecureDFUPacket {
         // This is called when we no longer have data to send (PRN received after the whole object was sent)
         // Fixes issue IDFU-9
         if packetsToSendNow == 0 {
-            aCompletion()
+            aCompletion(())
             return
         }
 
@@ -160,7 +160,7 @@ internal class SecureDFUPacket {
             // Notify handler of current object progress to start sending next one
             if bytesSent == objectSizeInBytes {
                 if aPRNValue == 0 || originalPacketsToSendNow < UInt32(aPRNValue) {
-                    aCompletion()
+                    aCompletion(())
                 } else {
                     // The whole object has been sent but the DFU target will
                     // send a PRN notification as expected.

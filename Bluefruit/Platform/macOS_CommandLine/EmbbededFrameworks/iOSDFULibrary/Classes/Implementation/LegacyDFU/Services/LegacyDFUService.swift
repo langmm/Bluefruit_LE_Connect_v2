@@ -401,7 +401,7 @@ import CoreBluetooth
                         self.firmware = nil
                         self.report   = nil
                         self.progressDelegate = nil
-                        success()
+                        success(())
                     },
                     onPacketReceiptNofitication: {
                         bytesReceived in
@@ -498,7 +498,7 @@ import CoreBluetooth
             onSuccess: {
                 major, minor in
                 self.version = (major, minor)
-                success()
+                success(())
             },
             onError:report
         )
@@ -559,7 +559,7 @@ import CoreBluetooth
             } else {
                 // Else... proceed
                 version = nil
-                _success?()
+                _success?(())
             }
         }
     }

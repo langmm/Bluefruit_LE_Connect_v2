@@ -430,7 +430,7 @@ internal class SecureDFUControlPoint : NSObject, CBPeripheralDelegate {
         } else {
             logger.v("Notifications enabled for \(characteristic.uuid.uuidString)")
             logger.a("Secure DFU Control Point notifications enabled")
-            success?()
+            success?(())
         }
     }
     
@@ -483,10 +483,10 @@ internal class SecureDFUControlPoint : NSObject, CBPeripheralDelegate {
                         response?(dfuResponse)
                     case .createObject, .setPRNValue, .execute:
                         // Don't log, executor or service will do it for us
-                        success?()
+                        success?(())
                     default:
                         logger.a("\(dfuResponse.description) received")
-                        success?()
+                        success?(())
                     }
                 } else if dfuResponse.status == .extendedError {
                     // An extended error was received

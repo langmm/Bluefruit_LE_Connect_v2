@@ -303,7 +303,7 @@ internal struct PacketReceiptNotification {
         } else {
             logger.v("Notifications enabled for \(characteristic.uuid.uuidString)")
             logger.a("DFU Control Point notifications enabled")
-            success?()
+            success?(())
         }
     }
     
@@ -326,7 +326,7 @@ internal struct PacketReceiptNotification {
                 logger.a("\(request!.description) request sent")
                 logger.w("Device disconnected before sending ACK")
                 logger.w(error!)
-                success?()
+                success?(())
             }
         } else {
             logger.i("Data written to \(characteristic.uuid.uuidString)")
@@ -339,7 +339,7 @@ internal struct PacketReceiptNotification {
                 logger.a("\(request!.description) request sent")
                 // there will be no notification send after these requests, call success() immetiatelly
                 // (for .ReceiveFirmwareImage the notification will be sent after firmware upload is complete)
-                success?()
+                success?(())
             case .initDfuParameters(_), .initDfuParameters_v1:
                 // Log was created before sending the Op Code
                 
@@ -347,7 +347,7 @@ internal struct PacketReceiptNotification {
                 break
             case .receiveFirmwareImage:
                 if proceed == nil {
-                    success?()
+                    success?(())
                 }
             }
         }
@@ -390,7 +390,7 @@ internal struct PacketReceiptNotification {
                     default:
                         break
                     }
-                    success?()
+                    success?(())
                 } else {
                     logger.e("Error \(response.status!.code): \(response.status!.description)")
                     report?(DFUError(rawValue: Int(response.status!.rawValue))!, response.status!.description)
